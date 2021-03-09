@@ -1,0 +1,42 @@
+{
+    "name": "pdir/contao-sticky-footer",
+    "description": "Sticky footer for the backend with pure css and no javascript. Adds a class \"debug\" to the body if debug mode is active.",
+    "keywords": [
+        "sticky",
+        "footer",
+        "backend"
+    ],
+    "type": "contao-bundle",
+    "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Webdesign für Dresden",
+      "homepage": "https://pdir.de",
+      "email": "develop@pdir.de",
+      "role": "Developer"
+    }
+  ],
+    "support": {
+        "issues": "https://github.com/pdir/contao-sticky-footer/issues",
+        "source": "https://github.com/pdir/contao-sticky-footer"
+    },
+    "require": {
+        "contao/core-bundle": "^4.4"
+    },
+    "require-dev": {
+        "contao/easy-coding-standard": "^3.0",
+        "contao/manager-plugin": "^2.3",
+        "contao/test-case": "^4.0",
+        "phpunit/phpunit": "^8.4",
+        "symfony/http-client": "4.4.*",
+        "symfony/phpunit-bridge": "4.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pdir\\ContaoStickyFooterBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Pdir\\ContaoStickyFooterBundle\\ContaoManager\\Plugin"
+    }
+}
