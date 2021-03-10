@@ -17,5 +17,5 @@
 $GLOBALS['TL_HOOKS']['parseBackendTemplate'][] = [\Pdir\ContaoStickyFooterBundle\EventListener\ParseBackendTemplateListener::class, '__invoke'];
 if (TL_MODE == 'BE')
 {
-    $GLOBALS['TL_CSS'][] = 'bundles/pdircontaobackendtoolbar/contao-backend-toolbar.scss|static';
+    $GLOBALS['TL_CSS'][] = 'bundles/pdircontaostickyfooter/sticky-footer.scss|static';
 }
