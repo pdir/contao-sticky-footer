@@ -28,9 +28,18 @@ class ParseBackendTemplateListener
     {
         if ('be_main' === $template) {
             $container = System::getContainer();
+
             // Check if debug mode is enabled.
-            if ($container->getParameter('kernel.debug'))
+            if (!$container->getParameter('kernel.debug'))
             {
+                return $buffer;
+            }
+
+            if(str_contains($buffer, '<body id="top">')) {
+                // Contao 5
+                $buffer = str_replace('<body id="top">', '<body id="top" class="debug">', $buffer);
+            } else {
+                // Contao 4 and Contao 5 popup
                 $buffer = str_replace('<body id="top" class="', '<body id="top" class="debug ', $buffer);
             }
         }

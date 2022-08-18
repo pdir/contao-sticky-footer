@@ -12,4 +12,5 @@ Types of changes
 
 ## [1.1.0](https://github.com/pdir/contao-sticky-footer/tree/1.1.0) - 2022-08-18
 
+- [Fixed]  fix sticky footer in simple modal (Back end popup)
 - [Changed] Allow Contao 5, remove support for Contao 4.4 and 4.9

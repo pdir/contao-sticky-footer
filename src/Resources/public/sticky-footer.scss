@@ -1,4 +1,27 @@
 body {
-  .tl_formbody_submit { position: sticky; bottom: 0; }
-  &.debug .tl_formbody_submit { bottom: 36px; }
+  .tl_formbody_submit {
+    position: sticky; bottom: 0;
+  }
+  &.debug .tl_formbody_submit {
+    bottom: 36px;
+  }
+
+  &.popup {
+    margin-bottom: 50px;
+
+    .tl_formbody_submit {
+      position: fixed;
+      width: 100%;
+    }
+
+
+  }
+
+  &.debug.popup {
+    margin-bottom: 87px;
+
+    .tl_formbody_submit {
+      bottom: 73px;
+    }
+  }
 }
