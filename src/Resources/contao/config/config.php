@@ -14,8 +14,12 @@
  * file that was distributed with this source code.
  */
 
-$GLOBALS['TL_HOOKS']['parseBackendTemplate'][] = [\Pdir\ContaoStickyFooterBundle\EventListener\ParseBackendTemplateListener::class, '__invoke'];
-if (TL_MODE == 'BE')
+use Contao\System;
+use Pdir\ContaoStickyFooterBundle\EventListener\ParseBackendTemplateListener;
+use Symfony\Component\HttpFoundation\Request;
+
+$GLOBALS['TL_HOOKS']['parseBackendTemplate'][] = [ParseBackendTemplateListener::class, '__invoke'];
+if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create('')))
 {
     $GLOBALS['TL_CSS'][] = 'bundles/pdircontaostickyfooter/sticky-footer.scss|static';
 }

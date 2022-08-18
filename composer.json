@@ -21,7 +21,8 @@
         "source": "https://github.com/pdir/contao-sticky-footer"
     },
     "require": {
-        "contao/core-bundle": "^4.4"
+        "php": "^8.0",
+        "contao/core-bundle": "^4.13 || ^5.0"
     },
     "require-dev": {
         "contao/easy-coding-standard": "^3.0",
