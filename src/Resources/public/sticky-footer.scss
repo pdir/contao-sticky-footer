@@ -2,7 +2,7 @@ body {
   .tl_formbody_submit {
     position: sticky;
     bottom: 0;
-    z-index: 0;
+    z-index: 1;
   }
   &.debug .tl_formbody_submit {
     bottom: 36px;
