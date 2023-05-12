@@ -15,15 +15,9 @@ body {
       position: fixed;
       width: 100%;
     }
-
-
   }
+}
 
-  &.debug.popup {
-    margin-bottom: 87px;
-
-    .tl_formbody_submit {
-      bottom: 73px;
-    }
-  }
+.popup .sf-toolbarreset {
+  display: none;
 }

@@ -10,7 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [1.1.1](https://github.com/pdir/contao-sticky-footer/tree/1.1.0) - 2022-10-08
+## [1.1.2](https://github.com/pdir/contao-sticky-footer/tree/1.1.2) - 2023-05-12
+
+- [Fixed] Fix sticky footer in popup
+
+## [1.1.1](https://github.com/pdir/contao-sticky-footer/tree/1.1.1) - 2022-10-08
 
 - [Fixed] Sticky footer lies behind content element [#4](https://github.com/pdir/contao-sticky-footer/issues/4)
 
