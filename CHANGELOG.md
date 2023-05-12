@@ -14,6 +14,7 @@ Types of changes
 
 - [Fixed] Fix sticky footer in popup
 - [Fixed] Fix TinyMCE overlays sticky footer
+- [Fixed] Fix mobile sticky footer
 
 ## [1.1.1](https://github.com/pdir/contao-sticky-footer/tree/1.1.1) - 2022-10-08
 

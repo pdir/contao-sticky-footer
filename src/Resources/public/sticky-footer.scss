@@ -21,3 +21,9 @@ body {
 .popup .sf-toolbarreset {
   display: none;
 }
+
+@media (max-width: 991px) {
+  #main, #container {
+    overflow: visible;
+  }
+}
