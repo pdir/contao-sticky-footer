@@ -2,7 +2,9 @@ body {
   .tl_formbody_submit {
     position: sticky;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
+    float: left;
+    width: 100%;
   }
   &.debug .tl_formbody_submit {
     bottom: 36px;
@@ -15,15 +17,15 @@ body {
       position: fixed;
       width: 100%;
     }
-
-
   }
+}
 
-  &.debug.popup {
-    margin-bottom: 87px;
+.popup .sf-toolbarreset {
+  display: none;
+}
 
-    .tl_formbody_submit {
-      bottom: 73px;
-    }
+@media (max-width: 991px) {
+  #main, #container {
+    overflow: visible;
   }
 }
