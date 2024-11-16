@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.1.3](https://github.com/pdir/contao-sticky-footer/tree/1.1.3) - 2024-11-16
+
+- [Fixed] Use local CSS preprocessors
+
 ## [1.1.2](https://github.com/pdir/contao-sticky-footer/tree/1.1.2) - 2023-09-18
 
 - [Fixed] Fix sticky footer in popup

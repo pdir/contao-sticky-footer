@@ -1,0 +1,29 @@
+body .tl_formbody_submit {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  float: left;
+  width: 100%;
+}
+body.debug .tl_formbody_submit {
+  bottom: 36px;
+}
+body.popup {
+  margin-bottom: 50px;
+}
+body.popup .tl_formbody_submit {
+  position: fixed;
+  width: 100%;
+}
+
+.popup .sf-toolbarreset {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  #main, #container {
+    overflow: visible;
+  }
+}
+
+/*# sourceMappingURL=sticky-footer.css.map */

@@ -21,5 +21,5 @@ use Symfony\Component\HttpFoundation\Request;
 $GLOBALS['TL_HOOKS']['parseBackendTemplate'][] = [ParseBackendTemplateListener::class, '__invoke'];
 if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create('')))
 {
-    $GLOBALS['TL_CSS'][] = 'bundles/pdircontaostickyfooter/sticky-footer.scss|static';
+    $GLOBALS['TL_CSS'][] = 'bundles/pdircontaostickyfooter/sticky-footer.css|static';
 }
