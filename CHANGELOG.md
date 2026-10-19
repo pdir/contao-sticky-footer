@@ -10,6 +10,12 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.2.0](https://github.com/pdir/contao-sticky-footer/tree/1.2.0) - 2026-10-15
+
+- [Changed] Allow Contao 6, remove support for Contao 4
+- [Changed] Register hook via `#[AsHook]` attribute and service autoconfiguration
+- [Changed] Use Contao 5 bundle directory structure
+
 ## [1.1.3](https://github.com/pdir/contao-sticky-footer/tree/1.1.3) - 2024-11-16
 
 - [Fixed] Use local CSS preprocessors

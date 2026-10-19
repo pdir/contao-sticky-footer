@@ -1,9 +1,9 @@
 <?php
 
 /*
- * Contao backend toolbar bundle for Contao Open Source CMS
+ * pdir Sticky Footer bundle for Contao Open Source CMS
  *
- * Copyright (c) 2020 pdir / digital agentur // pdir GmbH
+ * Copyright (c) 2026 pdir / digital agentur // pdir GmbH
  *
  * @package    contao-sticky-footer
  * @link       https://github.com/pdir/contao-sticky-footer
@@ -16,15 +16,13 @@
 
 namespace Pdir\ContaoStickyFooterBundle\EventListener;
 
-use Contao\CoreBundle\ServiceAnnotation\Hook;
+use Contao\CoreBundle\DependencyInjection\Attribute\AsHook;
 use Contao\System;
 
-/**
- * @Hook("parseBackendTemplate")
- */
+#[AsHook('parseBackendTemplate')]
 class ParseBackendTemplateListener
 {
-    public function __invoke(string $buffer, string $template)
+    public function __invoke(string $buffer, string $template): string
     {
         if ('be_main' === $template) {
             $container = System::getContainer();
@@ -36,10 +34,10 @@ class ParseBackendTemplateListener
             }
 
             if(str_contains($buffer, '<body id="top">')) {
-                // Contao 5
+                // Main backend view
                 $buffer = str_replace('<body id="top">', '<body id="top" class="debug">', $buffer);
             } else {
-                // Contao 4 and Contao 5 popup
+                // Body already has classes, e.g. popup
                 $buffer = str_replace('<body id="top" class="', '<body id="top" class="debug ', $buffer);
             }
         }

@@ -1,9 +1,9 @@
 <?php
 
 /*
- * Contao backend toolbar bundle for Contao Open Source CMS
+ * pdir Sticky Footer bundle for Contao Open Source CMS
  *
- * Copyright (c) 2020 pdir / digital agentur // pdir GmbH
+ * Copyright (c) 2026 pdir / digital agentur // pdir GmbH
  *
  * @package    contao-sticky-footer
  * @link       https://github.com/pdir/contao-sticky-footer
@@ -18,9 +18,10 @@ namespace Pdir\ContaoStickyFooterBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-/**
- * Class PdirContaoStickyFooterBundle
- */
 class PdirContaoStickyFooterBundle extends Bundle
 {
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
 }

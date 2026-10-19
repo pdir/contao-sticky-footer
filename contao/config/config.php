@@ -1,9 +1,9 @@
 <?php
 
 /*
- * Contao backend toolbar bundle for Contao Open Source CMS
+ * pdir Sticky Footer bundle for Contao Open Source CMS
  *
- * Copyright (c) 2020 pdir / digital agentur // pdir GmbH
+ * Copyright (c) 2026 pdir / digital agentur // pdir GmbH
  *
  * @package    contao-sticky-footer
  * @link       https://github.com/pdir/contao-sticky-footer
@@ -15,10 +15,8 @@
  */
 
 use Contao\System;
-use Pdir\ContaoStickyFooterBundle\EventListener\ParseBackendTemplateListener;
 use Symfony\Component\HttpFoundation\Request;
 
-$GLOBALS['TL_HOOKS']['parseBackendTemplate'][] = [ParseBackendTemplateListener::class, '__invoke'];
 if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest(System::getContainer()->get('request_stack')->getCurrentRequest() ?? Request::create('')))
 {
     $GLOBALS['TL_CSS'][] = 'bundles/pdircontaostickyfooter/sticky-footer.css|static';
