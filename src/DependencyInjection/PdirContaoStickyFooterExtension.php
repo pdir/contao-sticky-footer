@@ -1,9 +1,9 @@
 <?php
 
 /*
- * Contao backend toolbar bundle for Contao Open Source CMS
+ * pdir Sticky Footer bundle for Contao Open Source CMS
  *
- * Copyright (c) 2020 pdir / digital agentur // pdir GmbH
+ * Copyright (c) 2026 pdir / digital agentur // pdir GmbH
  *
  * @package    contao-sticky-footer
  * @link       https://github.com/pdir/contao-sticky-footer
@@ -21,21 +21,14 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-/**
- * Class PdirContaoStickyFooterExtension
- */
 class PdirContaoStickyFooterExtension extends Extension
 {
     /**
      * @throws \Exception
      */
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
-        $loader = new YamlFileLoader(
-            $container,
-            new FileLocator(__DIR__ . '/../Resources/config')
-        );
-        
-        $loader->load('services.yml');
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../../config'));
+        $loader->load('services.yaml');
     }
 }
