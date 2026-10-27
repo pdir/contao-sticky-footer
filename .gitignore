@@ -9,3 +9,6 @@ cypress.json
 # PhpUnit
 /.idea
 /.phpunit.result.cache
+
+# Mac
+.DS_Store
