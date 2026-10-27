@@ -10,12 +10,25 @@ body {
     bottom: 36px;
   }
 
+  // Debug toolbar collapsed to the small icon (Symfony >= 7.3 / <= 7.2)
+  &.debug:has(.sf-toolbar-closed),
+  &.debug:has(.sf-toolbarreset[style*="display: none"]) {
+    .tl_formbody_submit {
+      bottom: 0;
+    }
+  }
+
   &.popup {
     margin-bottom: 50px;
 
     .tl_formbody_submit {
       position: fixed;
       width: 100%;
+    }
+
+    // Debug toolbar is hidden in popups, see below
+    &.debug .tl_formbody_submit {
+      bottom: 0;
     }
   }
 }

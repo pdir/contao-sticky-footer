@@ -8,12 +8,18 @@ body .tl_formbody_submit {
 body.debug .tl_formbody_submit {
   bottom: 36px;
 }
+body.debug:has(.sf-toolbar-closed) .tl_formbody_submit, body.debug:has(.sf-toolbarreset[style*="display: none"]) .tl_formbody_submit {
+  bottom: 0;
+}
 body.popup {
   margin-bottom: 50px;
 }
 body.popup .tl_formbody_submit {
   position: fixed;
   width: 100%;
+}
+body.popup.debug .tl_formbody_submit {
+  bottom: 0;
 }
 
 .popup .sf-toolbarreset {
