@@ -30,6 +30,14 @@ body {
     &.debug .tl_formbody_submit {
       bottom: 0;
     }
+
+    // Popup iframes are narrower than 992px, where Contao sets
+    // "will-change: transform" on #main for the mobile navigation. That
+    // makes #main the containing block of the fixed footer, so it would
+    // sit at the end of the content instead of the bottom of the iframe.
+    #main {
+      will-change: auto;
+    }
   }
 }
 

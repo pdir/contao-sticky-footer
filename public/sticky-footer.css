@@ -21,6 +21,9 @@ body.popup .tl_formbody_submit {
 body.popup.debug .tl_formbody_submit {
   bottom: 0;
 }
+body.popup #main {
+  will-change: auto;
+}
 
 .popup .sf-toolbarreset {
   display: none;
