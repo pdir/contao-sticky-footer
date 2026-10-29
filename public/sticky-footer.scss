@@ -1,0 +1,52 @@
+body {
+  .tl_formbody_submit {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    float: left;
+    width: 100%;
+  }
+  &.debug .tl_formbody_submit {
+    bottom: 36px;
+  }
+
+  // Debug toolbar collapsed to the small icon (Symfony >= 7.3 / <= 7.2)
+  &.debug:has(.sf-toolbar-closed),
+  &.debug:has(.sf-toolbarreset[style*="display: none"]) {
+    .tl_formbody_submit {
+      bottom: 0;
+    }
+  }
+
+  &.popup {
+    margin-bottom: 50px;
+
+    .tl_formbody_submit {
+      position: fixed;
+      width: 100%;
+    }
+
+    // Debug toolbar is hidden in popups, see below
+    &.debug .tl_formbody_submit {
+      bottom: 0;
+    }
+
+    // Popup iframes are narrower than 992px, where Contao sets
+    // "will-change: transform" on #main for the mobile navigation. That
+    // makes #main the containing block of the fixed footer, so it would
+    // sit at the end of the content instead of the bottom of the iframe.
+    #main {
+      will-change: auto;
+    }
+  }
+}
+
+.popup .sf-toolbarreset {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  #main, #container {
+    overflow: visible;
+  }
+}

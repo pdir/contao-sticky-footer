@@ -1,0 +1,9 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Pdir\ContaoStickyFooterBundle\:
+    resource: ../src/
+    exclude: ../src/{ContaoManager,DependencyInjection,PdirContaoStickyFooterBundle.php}

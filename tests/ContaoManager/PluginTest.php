@@ -1,9 +1,9 @@
 <?php
 
 /*
- * Contao backend toolbar bundle for Contao Open Source CMS
+ * pdir Sticky Footer bundle for Contao Open Source CMS
  *
- * Copyright (c) 2020 pdir / digital agentur // pdir GmbH
+ * Copyright (c) 2026 pdir / digital agentur // pdir GmbH
  *
  * @package    contao-sticky-footer
  * @link       https://github.com/pdir/contao-sticky-footer
@@ -23,35 +23,20 @@ use Contao\TestCase\ContaoTestCase;
 use Pdir\ContaoStickyFooterBundle\ContaoManager\Plugin;
 use Pdir\ContaoStickyFooterBundle\PdirContaoStickyFooterBundle;
 
-/**
- * Class PluginTest
- *
- * @package Pdir\ContaoStickyFooterBundle\Tests\ContaoManager
- */
 class PluginTest extends ContaoTestCase
 {
-    /**
-     * Test Contao manager plugin class instantiation
-     */
-    public function testInstantiation()
+    public function testInstantiation(): void
     {
         $this->assertInstanceOf(Plugin::class, new Plugin());
     }
 
-    /**
-     * Test returns the bundles
-     */
-    public function testGetBundles()
+    public function testGetBundles(): void
     {
-        $plugin = new Plugin();
-
-        /** @var array $bundles */
-        $bundles = $plugin->getBundles(new DelegatingParser());
+        $bundles = (new Plugin())->getBundles(new DelegatingParser());
 
         $this->assertCount(1, $bundles);
         $this->assertInstanceOf(BundleConfig::class, $bundles[0]);
         $this->assertSame(PdirContaoStickyFooterBundle::class, $bundles[0]->getName());
         $this->assertSame([ContaoCoreBundle::class], $bundles[0]->getLoadAfter());
     }
-
 }

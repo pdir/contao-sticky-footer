@@ -1,9 +1,9 @@
 <?php
 
 /*
- * Contao backend toolbar bundle for Contao Open Source CMS
+ * pdir Sticky Footer bundle for Contao Open Source CMS
  *
- * Copyright (c) 2020 pdir / digital agentur // pdir GmbH
+ * Copyright (c) 2026 pdir / digital agentur // pdir GmbH
  *
  * @package    contao-sticky-footer
  * @link       https://github.com/pdir/contao-sticky-footer
@@ -16,13 +16,12 @@
 
 namespace Pdir\ContaoStickyFooterBundle\ContaoManager;
 
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use Pdir\ContaoStickyFooterBundle\PdirContaoStickyFooterBundle;
 
-/**
- * Class Plugin
- */
 class Plugin implements BundlePluginInterface
 {
     /**
@@ -31,8 +30,8 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create('Pdir\ContaoStickyFooterBundle\PdirContaoStickyFooterBundle')
-                ->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle']),
+            BundleConfig::create(PdirContaoStickyFooterBundle::class)
+                ->setLoadAfter([ContaoCoreBundle::class]),
         ];
     }
 }
