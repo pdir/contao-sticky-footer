@@ -25,6 +25,31 @@ body.popup #main {
   will-change: auto;
 }
 
+#template-studio--tabs {
+  --sf-tabs-height: 32px;
+}
+#template-studio--tabs > [data-contao--tabs-target=navigation] {
+  position: sticky;
+  top: 0;
+  z-index: 11;
+  height: var(--sf-tabs-height);
+  background: var(--content-bg);
+}
+#template-studio--tabs > [data-contao--tabs-target=navigation] > li {
+  box-sizing: border-box;
+  height: calc(var(--sf-tabs-height) + 2px);
+  vertical-align: top;
+}
+#template-studio--tabs .operations {
+  position: sticky;
+  top: var(--sf-tabs-height);
+  z-index: 10;
+  margin: -12px -12px 12px;
+  padding: 12px;
+  background: var(--content-bg);
+  border-bottom: 1px solid var(--border);
+}
+
 .popup .sf-toolbarreset {
   display: none;
 }
