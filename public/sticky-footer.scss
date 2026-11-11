@@ -41,6 +41,41 @@ body {
   }
 }
 
+// Template Studio (Contao 5.5+): #template-studio--tabs is the scroll
+// container, so the tab bar and the operations bar (Save, Rename, Delete …)
+// would scroll out of view with long templates. Keep both pinned to the top.
+#template-studio--tabs {
+  // Fixed tab bar height, so the operations bar knows where to stick
+  --sf-tabs-height: 32px;
+
+  > [data-contao--tabs-target="navigation"] {
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    height: var(--sf-tabs-height);
+    background: var(--content-bg);
+
+    > li {
+      box-sizing: border-box;
+      // Compensates the -1px top/bottom margins of the tabs
+      height: calc(var(--sf-tabs-height) + 2px);
+      vertical-align: top;
+    }
+  }
+
+  // The negative margin pulls the bar over the panel padding (12px), so the
+  // background covers the scrolled code completely.
+  .operations {
+    position: sticky;
+    top: var(--sf-tabs-height);
+    z-index: 10;
+    margin: -12px -12px 12px;
+    padding: 12px;
+    background: var(--content-bg);
+    border-bottom: 1px solid var(--border);
+  }
+}
+
 .popup .sf-toolbarreset {
   display: none;
 }

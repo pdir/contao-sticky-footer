@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## Unreleased
+
+- [Added] Keep the Template Studio tab bar and operations bar (Save, Rename, Delete) visible while scrolling
+
 ## [1.2.0](https://github.com/pdir/contao-sticky-footer/tree/1.2.0) - 2026-10-15
 
 - [Changed] Allow Contao 6, remove support for Contao 4
